@@ -21,14 +21,20 @@ function Set_user(){
         sleep(5);
         header('Location: Login.php');
     }              }
-
-
-
+if (isset($_POST['choice'])){
+    echo '<h3> thanks for visiting my site, taking you back to login.</h3>';
+    sleep(5);
+    session_destroy();
+    header('Location: Login.php');
+}
 ?>
-<?php Set_user() ?>
+
 
 </head>
 <body>
+<form style="margin: auto;" method='POST'>
+<input type='submit' name='choice' value='Logout'> 
 
+<?php Set_user() ?>
 </body>
 </html>
