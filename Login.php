@@ -8,6 +8,9 @@ CSC-155-201H_2022SP -->
 <head>
 <title>Login</title>
 <?php 
+$title = "Php Header Footer";                   
+include "header.php";      
+include "footer.php";
 session_start();
 // php library loading first
 // local php functions go here 
@@ -26,7 +29,7 @@ function getPost($key)
 
 function validate_login($username, $password)
 {
-    if ($username=="Jaxon" && $password=="New1")
+    if ($username=="Jackie" && $password=="New1")
     return true;
     return false;
 }
@@ -52,7 +55,7 @@ if (isset($_POST['choice']))
 ?>
 </head>
 <body>
-This is a student sample website.  Do NOT use real passwords!!!
+This is a student sample website. Username is Jackie Password is New1 . Do NOT use real passwords!!!
 <form method='POST'>
 Name: <input type='text' name='1stusername' value='<?php showPost("1stusername");?>'> <br>
 Password: <input type='password' name='1stpassword' value='<?php showPost("1stpassword");?>'> <br>

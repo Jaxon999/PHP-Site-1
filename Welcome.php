@@ -9,6 +9,9 @@ CSC-155-201H_2022SP -->
 <head>
 <title>Title goes here</title>
 <?php 
+$title = "Php Header Footer";                   
+include "header.php";      
+include "footer.php";
 session_start();
 // php library loading first
 // local php functions go here 

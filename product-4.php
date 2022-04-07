@@ -10,6 +10,9 @@ CSC-155-201H_2022SP -->
 // php library loading first
 // local php functions go here 
 // local php startup code goes here 
+$title = "Php Header Footer";                   
+include "header.php";      
+include "footer.php";
 ?>
 </head>
 <body>
