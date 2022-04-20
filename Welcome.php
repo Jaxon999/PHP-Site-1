@@ -12,6 +12,7 @@ CSC-155-201H_2022SP -->
 $title = "Php Header Footer";                   
 include "header.php";      
 include "footer.php";
+require("lib/PHPfunt.php");
 session_start();
 // php library loading first
 // local php functions go here 
@@ -26,10 +27,15 @@ function Set_user(){
     }              }
 if (isset($_POST['choice'])){
     echo '<h3> thanks for visiting my site, taking you back to login.</h3>';
-    sleep(5);
     session_destroy();
     header('Location: Login.php');
 }
+
+if (isadmin(connectDB(), ($_SESSION['username']))){
+    getallusers(connectDB());
+
+}
+
 ?>
 
 
