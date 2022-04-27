@@ -2,7 +2,7 @@
 function validate_or_bounce($group="None")
 {
     if (!isset($_SESSION['username']))
-    header("Location: login.php");
+    header("Location: Login.php");
     // if the group is None, proceed
 
     // if the user's usergroup does't matches $group bounce to welcome.php (or an access denied page)

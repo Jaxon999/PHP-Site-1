@@ -6,12 +6,12 @@ CSC-155-201H_2022SP -->
 
 <html>
 <head>
-<title>Login</title>
+<title>Jaxon's mall</title>
 <?php 
 require("lib/PHPfunt.php");
-$title = "Php Header Footer";                   
-include "header.php";      
-include "footer.php";
+                  
+include "lib/headernolog.php";      
+include "lib/footer.php";
 session_start();
 // php library loading first
 // local php functions go here 

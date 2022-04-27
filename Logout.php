@@ -6,14 +6,22 @@ CSC-155-201H_2022SP -->
 
 <html>
 <head>
-<title>Title goes here</title>
+<title>Jaxon's mall</title>
 <?php 
+include "lib/headernolog.php";      
+include "lib/footer.php";
+session_start();
 // php library loading first
 // local php functions go here 
-// local php startup code goes here 
+// local php startup code goes here
+
+
+session_destroy();
+header("refresh: 5; url=Login.php");
+
 ?>
 </head>
 <body>
-<p> call  here </p>
+    <center><b> Thank you for visiting my site, redirecting you to the login page.<b></center>
 </body>
 </html>

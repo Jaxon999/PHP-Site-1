@@ -7,11 +7,11 @@ CSC-155-201H_2022SP -->
 
 <html>
 <head>
-<title>Title goes here</title>
+<title>Jaxon's mall</title>
 <?php 
-$title = "Php Header Footer";                   
-include "header.php";      
-include "footer.php";
+                  
+include "lib/header.php";      
+include "lib/footer.php";
 require("lib/PHPfunt.php");
 session_start();
 // php library loading first
@@ -21,29 +21,24 @@ function Set_user(){
     if (isset($_SESSION['username']) && isset($_SESSION['password']) ) {
         echo '<h3>Hello, '. $_SESSION['username'] .', Welcome to my page</h3>';
     } else {
-        echo '<h3> it doent look like you have logged in, how did you get here? Bye Bye</h3>';
-        sleep(5);
         header('Location: Login.php');
-    }              }
-if (isset($_POST['choice'])){
-    echo '<h3> thanks for visiting my site, taking you back to login.</h3>';
-    session_destroy();
-    header('Location: Login.php');
-}
+    } 
+            }
 
-if (isadmin(connectDB(), ($_SESSION['username']))){
-    getallusers(connectDB());
 
-}
+
+function Displayusers(){  
+  if (isadmin(connectDB(), ($_SESSION['username']))){
+        getallusers(connectDB());
+     }
+    }
 
 ?>
 
 
 </head>
 <body>
-<form style="margin: auto;" method='POST'>
-<input type='submit' name='choice' value='Logout'> 
-
-<?php Set_user() ?>
+<?php Set_user(); 
+Displayusers();?>
 </body>
 </html>
